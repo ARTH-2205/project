@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+    <title>Mindfull Moments</title>
+    <link rel="stylesheet" href="mindfullmoments-signup.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mindfullmoments">Mindfull Moments</h1>
+        <h2 class="signin">Sign Up</h2>
+        
+        <form class="form-box" id="signupForm">
+            <label for="name" class="label1">
+                <i class="fa-solid fa-circle-user"></i> Your Name
+            </label>
+            <input type="text" placeholder="Enter Your Name" id="name" class="name"/>
+
+            <label for="email" class="label2">
+                <i class="fas fa-envelope"></i> Your Email
+            </label>
+            <input type="email" placeholder="Enter Your Email" id="email" class="email"/>
+
+            <label for="password" class="label3">
+                <i class="fa-solid fa-lock"></i> Your Password
+            </label>
+            <input type="password" placeholder="Enter Your Password" id="password" class="password"/>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="togglePassword" class="togglePasswordCheckbox"> 
+                <label for="togglePassword">Show Password</label>
+            </div>
+
+            <p id="notification" class="notification"></p> 
+
+            <button type="submit" class="submitbutton">Register</button>
+
+            
+
+            <p class="Alreadyhaveanaccount">Already have an account? <a href="#">Log-in</a></p>
+        </form>
+    </div>
+    <script src="mindfullmoments-signup.js"></script> 
+</body>
+</html>
