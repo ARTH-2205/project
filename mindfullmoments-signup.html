@@ -3,43 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="mindfullmoments-login.css"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <title>PERFECT BUILD LOG-IN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+    <title>Mindfull Moments</title>
+    <link rel="stylesheet" href="mindfullmoments-signup.css">
 </head>
 <body>
     <div class="container">
         <h1 class="mindfullmoments">Mindfull Moments</h1>
-        <h2 class="login">Log in</h2>
-        <form onsubmit="return check(event)">
-            <!-- Username -->
-            <label for="username" class="label1"><i class="fa-solid fa-circle-user"></i> User Name</label>
-            <input type="text" id="username" placeholder="Enter Your Username" class="name" />
-            
-            <!-- Password -->
-            <label for="password" class="label2"><i class="fa-solid fa-lock"></i> Password</label>
-            <input type="password" id="password" placeholder="Enter Your Password" class="password"/>
+        <h2 class="signin">Sign Up</h2>
+        
+        <form class="form-box" id="signupForm" method="POST" action="">
+            <label for="name" class="label1">
+                <i class="fa-solid fa-circle-user"></i> Your Name
+            </label>
+            <input type="text" placeholder="Enter Your Name" id="name" class="name" name="name" />
 
+            <label for="phonenumber" class="label2">
+                <i class="fa-solid fa-phone"></i> Your Phone Number (10 digits)
+            </label>
+            <input type="text" placeholder="Enter Your Phone Number" id="phonenumber" class="PhoneNumber" name="phonenumber" />
+
+            <label for="email" class="label3">
+                <i class="fas fa-envelope"></i> Your Email
+            </label>
+            <input type="email" placeholder="Enter Your Email" id="email" class="email" name="email" />
+
+            <label for="password" class="label3">
+                <i class="fa-solid fa-lock"></i> Your Password
+            </label>
+            <input type="password" placeholder="Enter Your Password" id="password" class="password" name="password" />
+            
             <div class="checkbox-container">
-                <label for="togglePassword">Show Password</label>
                 <input type="checkbox" id="togglePassword" class="togglePasswordCheckbox"> 
+                <label for="togglePassword">Show Password</label>
             </div>
 
-            
-            <!-- Notification -->
-             <p class="notification" id="notification"></p>
+            <label for="gender">Gender:</label>
+            <input type="radio" class="gender" name="gender" value="Male" > Male
+            <input type="radio" class="gender" name="gender" value="Female" > Female
+            <input type="radio" class="gender" name="gender" value="Others" > Others
+
+            <p id="notification" class="notification"></p> 
+
+            <button type="submit" class="submitbutton">Register</button>
 
             
-            <!-- Log-In Button -->
-            <button type="submit" class="loginbutton">Log in</button>
 
-            <!-- Forgot Password  -->
-            <p class="forgotpassword"><a href="forgotpassword.html" class="forgotlink">Forgot Password?</a></p>
-            
-            <!-- New-User? -->
-            <p class="newuser"> No account yet? <a href="mindfullmoments-signup.html"> Create </a></p>
+            <p class="Alreadyhaveanaccount">Already have an account? <a href="#">Log-in</a></p>
         </form>
     </div>
-    <script src="mindfullmoments-login.js"></script> 
+    <script src="mindfullmoments-signup.js"></script> 
 </body>
 </html>
