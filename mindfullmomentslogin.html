@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,31 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="mindfullmoments-login.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <title>PERFECT BUILD LOG-IN</title>
+    <title>Mindfull Moments - Log In</title>
 </head>
 <body>
     <div class="container">
         <h1 class="mindfullmoments">Mindfull Moments</h1>
         <h2 class="login">Log in</h2>
-        <form onsubmit="return check(event)">
+        <form method="POST" action="login.php">
             <!-- Username -->
             <label for="username" class="label1"><i class="fa-solid fa-circle-user"></i> User Name</label>
-            <input type="text" id="username" placeholder="Enter Your Username" class="name" />
+            <input type="text" id="username" name="username" placeholder="Enter Your Username" class="name" required />
             
             <!-- Password -->
             <label for="password" class="label2"><i class="fa-solid fa-lock"></i> Password</label>
-            <input type="password" id="password" placeholder="Enter Your Password" class="password"/>
+            <input type="password" id="password" name="password" placeholder="Enter Your Password" class="password" required />
 
             <div class="checkbox-container">
-                <label for="togglePassword">Show Password</label>
                 <input type="checkbox" id="togglePassword" class="togglePasswordCheckbox"> 
+                <label for="togglePassword">Show Password</label>
             </div>
 
-            
             <!-- Notification -->
-             <p class="notification" id="notification"></p>
+            <p class="notification" id="notification" style="color: red;"><?php echo $notification; ?></p>
 
-            
             <!-- Log-In Button -->
             <button type="submit" class="loginbutton">Log in</button>
 
@@ -40,6 +39,13 @@
             <p class="newuser"> No account yet? <a href="mindfullmoments-signup.html"> Create </a></p>
         </form>
     </div>
-    <script src="mindfullmoments-login.js"></script> 
+    <script src=""></script> 
+    <script>
+        // Function to toggle password visibility
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById('password');
+            passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
+        }
+    </script>
 </body>
 </html>
